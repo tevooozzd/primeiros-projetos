@@ -1,4 +1,4 @@
 # primeiros-projetos
-Esse repositório será de uso para treinar e entender bem como funciona o git/github e utilizarei a linguagem python em todos os projetos. 
+This repository will be used to train and understand how git/github works and I will use the Python language in all projects. 
 
-Espero que possa evoluir bastante em relação à usos de ferramentas como essas, e todo dia durante um mês tentarei realizar um projeto simples/médio, até que eu mesmo enxergue minhas capacidades para realizar projetos avançados!
+I hope that I can evolve a lot in terms of using tools like these, and every day for a month I will try to carry out a simple/medium project, until I see my abilities to carry out advanced projects!
