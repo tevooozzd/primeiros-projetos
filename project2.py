@@ -1,27 +1,22 @@
-# - Entendendo o uso do input, float, int e src
-# - Input utilizamos para recerbemos entrada do user
+# - Understanding the use of input, float, int, and str
+# - We use input to receive user input
 
-
-
-            #INPUT
-nome = input("Digite seu nome: ")
-print(nome) # Output: Digite seu nome: (entrada do user, (exemplo 'Ana'))
+            # INPUT
+name = input("Enter your name: ")
+print(name) # Output: Enter your name: (user input, (example 'Ana'))
             # Output: Ana
 
+            # FLOAT, INT, AND STR
+# - If we want the user to enter numbers, we use FLOAT and INT
+# - FLOAT is for decimal numbers
+# - INT is for integer numbers
+# - STR is used to convert NUMBERS (FLOAT AND INT) to STRING
+age = int(input('Enter your age: ')) # - A person can't be a fraction of a year, so we use INT
+price = float(input("The product costs: ")) # - An item can cost (X amount) and may include cents, so we use FLOAT
+salary = float(input("Enter your salary: ")) # - A person can receive a decimal amount, such as cents, so we use FLOAT
 
+        # - If the numbers are not converted to STR, you will receive an error message
 
-            #FLOAT, INT E STC
-# - Caso queremos que o úsuario coloque números, utilizamos o FLOAT E INT
-# - FLOAT serve para números decimais
-# - Já int serve para números inteiros
-# - STC, serve para converter NÚMEROS ( FLOAT E INT) para STRING
-idade = int(input('Digite sua idade: ')) # - Não tem como uma pessoa ter anos e meio, por isso utilizamos o INT
-preço = float(input("O produto x custa: ")) # - Um item/objeto pode valer (X Valor) e com isso pode utilizar centavos, por isso usamos o FLOAT
-salario = float(input("Digite seu salário:  ")) # - Uma pessoa pode receber em valor decimal, como em centavos por isso usamos o FLOAT
-
-
-        # - Caso os números nao sejam convertidos em STR, você recebe uma mensagem de erro
-
-print("Sua idade é de: " + str(idade)) # Output: "Sua idade é de: x"
-print("O produto custa : " + str(preço)) # Output: "O produto custa: y"
-print("Seu salário é de : "  + str(salario)) # Output: "Seu salariio é de: z"
+print("Your age is: " + str(age)) # Output: "Your age is: x"
+print("The product costs: " + str(price)) # Output: "The product costs: y"
+print("Your salary is: " + str(salary)) # Output: "Your salary is: z"
