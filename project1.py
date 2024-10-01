@@ -1,21 +1,16 @@
-# - Criação de váriaveis 
-# - Letras maiúsculas e minúsculas fazem a diferença
+# - Creating variables
+# - Uppercase and lowercase letters make a difference
 
-lojaum = 0
-lojaUm = 1
-print(lojaum, lojaUm) ## - Output = 0 1
+store_one = 0
+storeOne = 1
+print(store_one, storeOne) ## - Output = 0 1
 
-# -  Não se pode utilizar espaços
-# -  Para resolver isso utilizamos _, assim podemos juntar diferentes palavras
-# (Uma mensagem de erro aparece com a tentativa de variavel : 'loja um = 0'
+# - Spaces cannot be used
+# - To solve this, we use _, allowing us to combine different words
+# (An error message appears when attempting to create a variable: 'store one = 0')
 
+store_one = 0
+print(store_one)  ## - Output = 0
 
-loja_um = 0
-print(loja_um)  ## - Output = 0
-
-# - Não se pode utilizar palavras chaves como variaveis (false, true, break, etc...)
-# - Output com mensagem de erro no exemplo: False = 'oi'
-
-
-
-
+# - Keywords cannot be used as variables (false, true, break, etc...)
+# - Output with error message in the example: False = 'hello'
