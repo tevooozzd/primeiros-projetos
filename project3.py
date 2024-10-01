@@ -1,37 +1,35 @@
-## - Entendendo como analisar dados do usuário 
-## - Recapitulação INPUT, INT, FLOAT E STR
-## - Agora utilizando análise de dados (IF, ELSE E ELSE IF)
+## - Understanding how to analyze user data
+## - Recap of INPUT, INT, FLOAT, and STR
+## - Now using data analysis (IF, ELSE, and ELSE IF)
 
-            # Relembrando INPUT, FLOAT, INT E STR 
-            #   - Caso queremos ter uma resposta do user, utilizamos o input()
-input("Digite seu nome: ")
-            #   - Caso queremos receber uma resposta em números utilizamos o INT E FLOAT antes do INPUT
-# - Números inteiros INT
-int(input("Digite sua idade: "))
-# - Números decimais FLOAT
-float(input("Digite o valor do produto: "))
-# - Transmitir esses valores de números para string
-str(variavel)
+            # Remembering INPUT, FLOAT, INT, and STR
+            #   - If we want to get a response from the user, we use input()
+input("Enter your name: ")
+            #   - If we want to receive a response in numbers, we use INT and FLOAT before INPUT
+# - Integer numbers INT
+int(input("Enter your age: "))
+# - Decimal numbers FLOAT
+float(input("Enter the product value: "))
+# - Convert these numerical values to string
+str(variable)
 
+            # - Data analysis
+            #   - Let's take user data and check if they are eligible to perform a certain action
 
-            # - Análise de dados
-            #   - Vamos pegar os dados de um usuário e verificar se ele é apto a realizar determinada ação
+age = int(input("Enter your age: "))
+salary = float(input("Enter your salary: "))
+product = float(input("The product value is: "))
 
-idade = int(input("Digite sua idade: "))
-salario = float(input("Digite seu salário: "))
-produto = float(input("O valor do produto é de: "))
-
-if idade < 18:
-    print("Você é menor de idade e não pode realizar uma compra dessa!")
-elif produto > salario:
-    print("Você não possui salario suficiente, sentimos muito, volte outra hora!")
+if age < 18:
+    print("You are a minor and cannot make this purchase!")
+elif product > salary:
+    print("You do not have enough salary, we are sorry, please come back later!")
 else: 
-    resultado = salario - produto
-    print("Você pode realizar a compra e sobrará: R$" + str(resultado) + " do seu salário!")
+    result = salary - product
+    print("You can make the purchase and will have R$" + str(result) + " left from your salary!")
 
-
-#                                 Explicação
-# 1 - Irá pegar as entradas do user
-# 2 - caso seja menor que 18 anos a mensagem print1 vai aparecer, caso for maior irá continuar
-# 3 - Irá pegar seu salario e o valor do produto, se o valor do produto for maior, irá retornar o print2 (pois não tem como comprar algo sem o dinheiro)
-# 4 - Caso o salario for maior que o produto, ira calcular (salario - produto), e irá aparecer no print3 quanto sobrou  
+#                                 Explanation
+# 1 - It will take the user's inputs
+# 2 - If the user is under 18, print1 will appear; if they are older, it will continue
+# 3 - It will check their salary and the product value; if the product value is greater, print2 will return (since you cannot buy something without the money)
+# 4 - If the salary is greater than the product value, it will calculate (salary - product), and print3 will show how much is left
