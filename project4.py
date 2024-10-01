@@ -8,7 +8,7 @@
 
 
 
-#                                     Understanding f-strings
+#                                             Understanding f-strings
 # F-strings allow you to insert Python expressions directly into strings, facilitating variable interpolation and text formatting.
 
 # Getting user input
@@ -27,7 +27,18 @@ print(f"Welcome {name}, your RG is {rg_student}, and your proof note is {proof_n
 # We use the "f" before the string, allowing us to work with different variables and strings at the same time, making it easier.
 
 
-# Average Calculation Project 
+
+
+
+
+
+
+
+
+
+
+
+#                                     Average Calculation Project 
 
 # Getting user information
 name = input("Type your name: ")
