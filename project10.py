@@ -106,3 +106,21 @@ if convert_operation == '1':
         result = value / 1000
         print(f"So {name}, your operation result is {result} meters.")
         sys.exit()
+
+
+
+
+
+
+# ============================================
+#                Explanation
+# ============================================
+# 1. The program begins by importing the necessary libraries: `time` for adding delays,
+#    and `sys` for program termination.
+# 2. A welcome message is displayed, prompting the user to enter their name.
+# 3. The user is presented with a menu of conversion options (length, temperature, capacity, mass, volume).
+# 4. The program validates the user's choice to ensure it's a valid option.
+# 5. If the user selects length conversion, they are prompted to choose two units to convert between.
+# 6. The program checks that the selected units are not the same and validates the input value.
+# 7. Based on the user's selections, the program performs the appropriate conversion calculations.
+# 8. The result is displayed to the user, and the program exits.
