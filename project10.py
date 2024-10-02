@@ -12,27 +12,26 @@ import sys   # To exit the program
 print("================================================================================================")
 print("Welcome to the UNIT CONVERTER project!\nTo start, let's know your name...")
 print("================================================================================================")
-time.sleep(1.3)  # Pause for 1.3 seconds
+
 
 # Getting user's name
 name = input("Type your name here: ")  # Get the user's name
 print(f"So {name}, let's start")  # Greet the user
 print("================================================================================================")
-time.sleep(1.3)
+
 
 # Presenting options for unit conversion
 print("Type the number corresponding to the operation you want: \n"
-      "Length - 1\n"
-      "Temperature - 2\n"
-      "Capacity - 3\n"
-      "Mass - 4\n"
-      "Volume - 5\n")
+    "Length - 1\n"
+    "Temperature - 2\n"
+    "Capacity - 3\n"
+    "Mass - 4\n")
 
 # Getting the user's choice for conversion operation
 convert_operation = input("What operation do you want to do?: ")
 while not convert_operation.isdigit() or not (1 <= int(convert_operation) <= 5):
     print("This is not an option OR not a number! Please try again.")
-    time.sleep(0.8)
+
     convert_operation = input("What operation do you want to do?: ")
 
 print(f"So {name}, you chose option {convert_operation}, let's start!")
@@ -119,7 +118,7 @@ if convert_operation == '1':
 # Capacity conversion
 elif convert_operation == '2':
     print('==================================================================')
-    print("In the this case of UNIT LENGHT we have a other options, you gonna choose TWO (2) the first gonna be convert to the second what do you prefer?")
+    print("In the this case of UNIT TEMPERATURE we have a other options, you gonna choose TWO (2) the first gonna be convert to the second what do you prefer?")
     print("Graus Celsius (oC) - 1\n"
         "Graus Fahrenheit (oF) - 2\n"
         "Kelvin (K) - 3\n")
@@ -212,7 +211,7 @@ elif convert_operation == '3':
 # Capacity conversion
 if convert_operation == '4':
     print('==================================================================')
-    print("In the this case of UNIT LENGHT we have a other options, you gonna choose TWO (2) the first gonna be convert to the second what do you prefer?")
+    print("In the this case of UNIT MASS we have a other options, you gonna choose TWO (2) the first gonna be convert to the second what do you prefer?")
     print("Milligram (mg) - 1\n"
         "Gram (g) - 2\n"
         "Kilogram (kg) - 3")
@@ -267,6 +266,16 @@ if convert_operation == '4':
 # 4. The user's choice is validated to ensure it corresponds to one of the available options. If the input is invalid, the user is prompted to try again.
 # 5. Based on the user's selection, the program enters the corresponding section for Length, Temperature, or Capacity conversion.
 # 6. Each section allows the user to choose two units for conversion and
+
+# ============================================
+#                Explanation
+# ============================================
+# 1. The program starts by importing necessary libraries: `time` for adding delays and `sys` for terminating the program.
+# 2. A welcome message is displayed, prompting the user to enter their name. The program pauses briefly before proceeding.
+# 3. The user is presented with a menu of conversion options: Length, Temperature, Capacity, Mass, and Volume.
+# 4. The user's choice is validated to ensure it corresponds to one of the available options. If the input is invalid, the user is prompted to try again.
+# 5. Based on the user's selection, the program enters the corresponding section for Length, Temperature, or Capacity conversion.
+# 6. Each section allows the user to choose two units for conversion and the system calculete for itself
 
 
 
