@@ -110,6 +110,12 @@ if convert_operation == '1':
 
 
 
+
+
+
+
+
+# Capacity conversion
 elif convert_operation == '2':
     print('==================================================================')
     print("In the this case of UNIT LENGHT we have a other options, you gonna choose TWO (2) the first gonna be convert to the second what do you prefer?")
@@ -119,24 +125,30 @@ elif convert_operation == '2':
     operationc1 = input("So choose one option to be converted: ")
     operationc2 = input("So choose the second option to convert: ")
     value = float(input("Now, type the quantity of you want to be converted: "))
+
+
+
+      
     while operationc1 == operationc2 or value == '':
         print("You can't use the same unit's try again, or not a valid value!")
 
 
 
+
+       # Perform the conversions based on user selections
     if operationc1 == '1' and operationc2 == '2':
         result = (value + 9/5) + 32
         print(f"So {name,} your operation result is {result} Fahrenheit (oF)")
     elif operationc1 == '1' and operationc2 == '3':
         result = value + 273.15
         print(f"So {name,} your operation result is {result} Kelvin (K)")
-    if operationc1 == '2' and operationc2 == '1':
+    elif operationc1 == '2' and operationc2 == '1':
         esult = (value - 32) * 5/9
         print(f"So {name,} your operation result is {result} Graus Celsius (oC))")
     elif operationc1 == '2' and operationc2 == '3':
         result = (value - 32) * 5/9 + 273.15
         print(f"So {name,} your operation result is {result} Kelvin (K)")
-    if operationc1 == '3' and operationc2 == '1':
+    elif operationc1 == '3' and operationc2 == '1':
         result = value - 273.15
         print(f"So {name,} your operation result is {result} Graus Celsius (oC))")
     elif operationc1 == '3' and operationc2 == '2':
@@ -145,6 +157,11 @@ elif convert_operation == '2':
     else:
         print("This is not a valid number please try again!")
         sys.exit()
+
+
+
+
+
 
 
 
@@ -160,9 +177,16 @@ elif convert_operation == '3':
     operationc2 = input("Choose the second option to convert to: ")
     value = float(input("Now, type the quantity you want to be converted: "))
 
+
+      
     while operationc1 == operationc2 or value == '':
         print("You can't use the same unit. Try again or enter a valid value!")
 
+
+
+
+
+      
     # Perform the conversions based on user selections
     if operationc1 == '1' and operationc2 == '2':
         result = value / 1000
@@ -175,6 +199,61 @@ elif convert_operation == '3':
     else:
         print("This is not a valid option, please try again!")
         sys.exit()
+
+
+
+
+
+
+
+
+# Capacity conversion
+if convert_operation == '4':
+    print('==================================================================')
+    print("In the this case of UNIT LENGHT we have a other options, you gonna choose TWO (2) the first gonna be convert to the second what do you prefer?")
+    print("Milligram (mg) - 1\n"
+        "Gram (g) - 2\n"
+        "Kilogram (kg) - 3")
+    operationc1 = input("Choose one option to convert from: ")
+    operationc2 = input("Choose the second option to convert to: ")
+    value = float(input("Now, type the quantity you want to be converted: "))
+
+
+    while operationc1 == operationc2 or value == '':
+        print("You can't use the same unit. Try again or enter a valid value!")
+
+
+       # Perform the conversions based on user selections
+    if operationc1 == '1' and operationc2 == '2':
+        result = value / 1000
+        print(f"So {name}, your operation result is {result} grams.")
+        sys.exit()
+    elif operationc1 == '1' and operationc2 == '3':
+        result = value / 1000000
+        print(f"So {name}, your operation result is {result} kilograms.")
+        sys.exit()
+    elif operationc1 == '2' and operationc2 == '1':
+        result = value * 1000
+        print(f"So {name}, your operation result is {result} milligrams.")
+        sys.exit()
+    elif operationc1 == '2' and operationc2 == '3':
+        result = value / 1000
+        print(f"So {name}, your operation result is {result} kilograms.")
+        sys.exit()
+    elif operationc1 == '3' and operationc2 == '1':
+        result = value * 1000000
+        print(f"So {name}, your operation result is {result} milligrams.")
+        sys.exit()
+    elif operationc1 == '3' and operationc2 == '2':
+        result = value * 1000
+        print(f"So {name}, your operation result is {result} grams.")
+        sys.exit()
+    else:
+        print("This is not a valid number please try again!")
+        sys.exit()
+
+
+
 
 # ============================================
 #                Explanation
