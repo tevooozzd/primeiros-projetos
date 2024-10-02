@@ -37,15 +37,16 @@ while not convert_operation.isdigit() or not (1 <= int(convert_operation) <= 5):
 
 print(f"So {name}, you chose option {convert_operation}, let's start!")
 
+
 # Length conversion
 if convert_operation == '1':
     print('==================================================================')
     print("In this case of UNIT LENGTH, you will choose TWO (2) units. The first will be converted to the second. What do you prefer?")
     print("Millimeter (mm) - 1\n"
-          "Centimeter (cm) - 2\n"
-          "Meter (m) - 3\n"
-          "Kilometer (km) - 4\n")
-    
+        "Centimeter (cm) - 2\n"
+        "Meter (m) - 3\n"
+        "Kilometer (km) - 4\n")
+    time.sleep(1)
     # Getting user's choices for conversion
     operationc1 = input("Choose one option to convert from: ")
     operationc2 = input("Choose the second option to convert to: ")
@@ -122,20 +123,21 @@ elif convert_operation == '2':
     print("Graus Celsius (oC) - 1\n"
         "Graus Fahrenheit (oF) - 2\n"
         "Kelvin (K) - 3\n")
+    time.sleep(1)
     operationc1 = input("So choose one option to be converted: ")
     operationc2 = input("So choose the second option to convert: ")
     value = float(input("Now, type the quantity of you want to be converted: "))
 
 
 
-      
+    
     while operationc1 == operationc2 or value == '':
         print("You can't use the same unit's try again, or not a valid value!")
 
 
 
 
-       # Perform the conversions based on user selections
+    # Perform the conversions based on user selections
     if operationc1 == '1' and operationc2 == '2':
         result = (value + 9/5) + 32
         print(f"So {name,} your operation result is {result} Fahrenheit (oF)")
@@ -143,7 +145,7 @@ elif convert_operation == '2':
         result = value + 273.15
         print(f"So {name,} your operation result is {result} Kelvin (K)")
     elif operationc1 == '2' and operationc2 == '1':
-        esult = (value - 32) * 5/9
+        result = (value - 32) * 5/9
         print(f"So {name,} your operation result is {result} Graus Celsius (oC))")
     elif operationc1 == '2' and operationc2 == '3':
         result = (value - 32) * 5/9 + 273.15
@@ -171,14 +173,14 @@ elif convert_operation == '3':
     print('==================================================================')
     print("In this case of UNIT CAPACITY, you will choose TWO (2) units. What do you prefer?")
     print("Milliliter (ml) - 1\n"
-          "Liter (l) - 2\n")
-    
+        "Liter (l) - 2\n")
+    time.sleep(1)
     operationc1 = input("Choose one option to convert from: ")
     operationc2 = input("Choose the second option to convert to: ")
     value = float(input("Now, type the quantity you want to be converted: "))
 
 
-      
+
     while operationc1 == operationc2 or value == '':
         print("You can't use the same unit. Try again or enter a valid value!")
 
@@ -186,7 +188,7 @@ elif convert_operation == '3':
 
 
 
-      
+
     # Perform the conversions based on user selections
     if operationc1 == '1' and operationc2 == '2':
         result = value / 1000
@@ -214,6 +216,7 @@ if convert_operation == '4':
     print("Milligram (mg) - 1\n"
         "Gram (g) - 2\n"
         "Kilogram (kg) - 3")
+    time.sleep(1)
     operationc1 = input("Choose one option to convert from: ")
     operationc2 = input("Choose the second option to convert to: ")
     value = float(input("Now, type the quantity you want to be converted: "))
@@ -223,7 +226,7 @@ if convert_operation == '4':
         print("You can't use the same unit. Try again or enter a valid value!")
 
 
-       # Perform the conversions based on user selections
+    # Perform the conversions based on user selections
     if operationc1 == '1' and operationc2 == '2':
         result = value / 1000
         print(f"So {name}, your operation result is {result} grams.")
@@ -264,3 +267,11 @@ if convert_operation == '4':
 # 4. The user's choice is validated to ensure it corresponds to one of the available options. If the input is invalid, the user is prompted to try again.
 # 5. Based on the user's selection, the program enters the corresponding section for Length, Temperature, or Capacity conversion.
 # 6. Each section allows the user to choose two units for conversion and
+
+
+
+
+
+
+
+
