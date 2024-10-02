@@ -20,7 +20,7 @@ import string  # For accessing string constants like letters and digits
 print("================================================================================================")
 print("Welcome to the generate password project!\nTo start, let's know your name...")
 print("================================================================================================")
-time.sleep(2)  # Pause for 2 seconds
+time.sleep(1.3)  # Pause for 2 seconds
 name = input("Type your name here: ")  # Get the user's name
 print(f"So {name}, let's start")  # Greet the user
 print("================================================================================================")
@@ -28,9 +28,21 @@ print("=========================================================================
 
 
 
+
 # Preparing to collect character options for the password
 characters = ''  # String to hold possible characters for the password
-password_length = int(input("Enter the number of characters you want in your password: "))  # Get desired password length
+import time
+
+# Get desired password length
+password_length = input("Enter the number of characters you want in your password: ")
+
+# Loop until a valid number is entered
+while not password_length.isdigit():
+    print("You typed an answer that's INVALID, let's try again!")
+    time.sleep(0.7)
+    password_length = input("Enter the number of characters you want in your password: ")
+password_length  = int(password_length)
+
 
 
 
@@ -82,9 +94,6 @@ elif numbers == 'n':
 else:
     print("This is not a valid option, so the answer is 'n' ")  # Handle invalid input
 
-
-
-
 # Asking the user if they want symbols
 print('=====================================================================')
 symbols = input("Do you want symbols? (Answer with y or n): ")  # Ask for symbols
@@ -104,11 +113,18 @@ else:
 
 
 
-# Generating the password from the selected characters
-print('=====================================================================')
-password = ''.join(random.choice(characters) for _ in range(password_length))  # Create password
-print(f"Hey {name},\nyour password with:\n{lowercase.upper()} for lowercase letters,\n{uppercase.upper()} for uppercase letters,\n{numbers.upper()} for numbers, and\n{symbols.upper()} for symbols,\nwith a length of {password_length} is:,\n\n:{password} ")  # Display the password
+while not characters:
+    print('=====================================================================') 
+    print(f"Hey {name}, your password cannot be generated because you need to choose at least one option. Let's try again!")
+    time.sleep(1)
+    break  # This will just break the loop without re-asking
 
+# Generate password if characters have been selected
+if characters:
+    password = ''.join(random.choice(characters) for _ in range(password_length))  # Create password
+    print(f"Hey {name},\nyour password with:\n{lowercase.upper()} for lowercase letters,\n{uppercase.upper()} for uppercase letters,\n{numbers.upper()} for numbers, and\n{symbols.upper()} for symbols,\nwith a length of {password_length} is:\n\n{password}")  # Display the password
+else:
+    print("You must select at least one type of character to generate a password.")
 
 
 
