@@ -28,13 +28,12 @@ print("=========================================================================
 
 
 
-
 # Preparing to collect character options for the password
-characters = ''  # String to hold possible characters for the password
-import time
-
-# Get desired password length
+characters = ''  
 password_length = input("Enter the number of characters you want in your password: ")
+
+
+
 
 # Loop until a valid number is entered
 while not password_length.isdigit():
@@ -42,8 +41,6 @@ while not password_length.isdigit():
     time.sleep(0.7)
     password_length = input("Enter the number of characters you want in your password: ")
 password_length  = int(password_length)
-
-
 
 
 
@@ -61,10 +58,6 @@ else:
     print("This is not a valid option, so the answer is 'n' ")  # Handle invalid input
 
 
-
-
-
-
 # Asking the user if they want uppercase letters
 print('=====================================================================')
 uppercase = input("Do you want uppercase letters? (Answer with y or n): ")  # Ask for uppercase letters
@@ -76,10 +69,6 @@ elif uppercase == 'n':
     print("Ok, Let's continue...")
 else:
     print("This is not a valid option, so the answer is 'n' ")  # Handle invalid input
-
-
-
-
 
 
 # Asking the user if they want numbers
@@ -94,6 +83,7 @@ elif numbers == 'n':
 else:
     print("This is not a valid option, so the answer is 'n' ")  # Handle invalid input
 
+
 # Asking the user if they want symbols
 print('=====================================================================')
 symbols = input("Do you want symbols? (Answer with y or n): ")  # Ask for symbols
@@ -105,10 +95,6 @@ elif symbols == 'n':
     print("Ok, Let's continue...")
 else:
     print("This is not a valid option, so the answer is 'n' ")  # Handle invalid input
-
-
-
-
 
 
 
