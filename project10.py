@@ -149,17 +149,39 @@ elif convert_operation == '2':
 
 
 
+# Capacity conversion
+elif convert_operation == '3':
+    print('==================================================================')
+    print("In this case of UNIT CAPACITY, you will choose TWO (2) units. What do you prefer?")
+    print("Milliliter (ml) - 1\n"
+          "Liter (l) - 2\n")
+    
+    operationc1 = input("Choose one option to convert from: ")
+    operationc2 = input("Choose the second option to convert to: ")
+    value = float(input("Now, type the quantity you want to be converted: "))
+
+    while operationc1 == operationc2 or value == '':
+        print("You can't use the same unit. Try again or enter a valid value!")
+
+    # Perform the conversions based on user selections
+    if operationc1 == '1' and operationc2 == '2':
+        result = value / 1000
+        print(f"So {name}, your operation result is {result} liters.")
+        sys.exit()
+    elif operationc1 == '2' and operationc2 == '1':
+        result = value * 1000
+        print(f"So {name}, your operation result is {result} milliliters.")
+        sys.exit()
+    else:
+        print("This is not a valid option, please try again!")
+        sys.exit()
+
 # ============================================
 #                Explanation
 # ============================================
 # 1. The program starts by importing necessary libraries: `time` for adding delays and `sys` for terminating the program.
 # 2. A welcome message is displayed, prompting the user to enter their name. The program pauses briefly before proceeding.
-# 3. The user is presented with a menu of conversion options, including Length, Temperature, Capacity, Mass, and Volume.
+# 3. The user is presented with a menu of conversion options: Length, Temperature, Capacity, Mass, and Volume.
 # 4. The user's choice is validated to ensure it corresponds to one of the available options. If the input is invalid, the user is prompted to try again.
-# 5. If the user selects Length (option 1), they are asked to choose two units to convert between (e.g., Millimeters, Centimeters, Meters, Kilometers).
-# 6. The user inputs the quantity they want to convert, and the program checks that the two selected units are not the same.
-# 7. Based on the user's selections, the program performs the appropriate conversion calculations and displays the result.
-# 8. If the user selects Temperature (option 2), they are prompted to choose units (Celsius, Fahrenheit, Kelvin) and provide a quantity to convert.
-# 9. The program calculates the temperature conversions according to the formulas defined for each unit.
-# 10. Finally, the results are printed to the user, and the program can be extended to handle further conversions for Capacity, Mass, and Volume.
-# 11. The program is structured to allow easy additions of more unit conversions by following the established format.
+# 5. Based on the user's selection, the program enters the corresponding section for Length, Temperature, or Capacity conversion.
+# 6. Each section allows the user to choose two units for conversion and
