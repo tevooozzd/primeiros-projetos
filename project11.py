@@ -1,43 +1,46 @@
-perguntasmatematica = {"Qual é a raiz quadrada de 144?" : "c",
-        "Qual é a fórmula para calcular a área de um círculo?": "a",
-            "Se um triângulo tem lados de 3 cm, 4 cm e 5 cm, ele é um triângulo?": "a",
-            "Qual é o resultado de '15%' de 200?" : "b",
-            "Qual é a soma dos ângulos internos de um quadrado?" : "d",
-            "O que representa a hipotenusa em um triângulo retângulo?" : "a",
-            "Como se chama uma sequência de números em que cada número é a soma dos dois anteriores?" : "b",
+# Questions and answers for Mathematics
+questions_math = {
+    "What is the square root of 144?": "c",
+    "What is the formula to calculate the area of a circle?": "a",
+    "If a triangle has sides of 3 cm, 4 cm, and 5 cm, is it a triangle?": "a",
+    "What is the result of '15%' of 200?": "b",
+    "What is the sum of the internal angles of a square?": "d",
+    "What does the hypotenuse represent in a right triangle?": "a",
+    "What do you call a sequence of numbers where each number is the sum of the two preceding ones?": "b"
+}
 
-            }
+options_math = {
+    "What is the square root of 144?": "A) 10    B) 11    C) 12    D) 13",
+    "What is the formula to calculate the area of a circle?": "A) A=πr    B) Y=mx + b     C) A + B + C    D) P = 4l",
+    "If a triangle has sides of 3 cm, 4 cm, and 5 cm, is it a triangle?": "A) Right    B) Isosceles    C) Scalene    D) Square",
+    "What is the result of '15%' of 200?": "A) 60    B) 30    C) 15    D) 5.75",
+    "What is the sum of the internal angles of a square?": "A) 40 degrees   B) 50 degrees   C) 180 degrees  D) 360 degrees",
+    "What does the hypotenuse represent in a right triangle?": "A) longest side of the triangle    B) Nothing   C) The side of the angle   D) The shortest side",
+    "What do you call a sequence of numbers where each number is the sum of the two preceding ones?": "A) Pythagorean   B) Fibonacci Sequence   C) Bhaskara  D) Physical Algebra"
+}
 
 
-opcoesmatematica  = {"Qual é a raiz quadrada de 144?" : "A) 10    B) 11    C) 12    D) 13",
-            "Qual é a fórmula para calcular a área de um círculo?": "A) A=πr    B) Y=mx + b     C) A + B + C    D) P = 4l   ",
-            "Se um triângulo tem lados de 3 cm, 4 cm e 5 cm, ele é um triângulo?": "A) Retângulo    B) Isóceles    C)   Escaleno    D) Quadrado",
-            "Qual é o resultado de '15%' de 200?" : "A) 60    B) 30    C) 15    D) 5.75",
-            "Qual é a soma dos ângulos internos de um quadrado?": " A)  40 graus   B) 50 graus   C) 180 graus  D) 360 graus ",
-            "O que representa a hipotenusa em um triângulo retângulo?": " A) maior lado do triângulo    B) Nada   C) O lado do ângulo   D) O menor lado",
-            "Como se chama uma sequência de números em que cada número é a soma dos dois anteriores?" : " A) Pitagoras   B) Sequência de Fibonacci C) Bhaskara  D) Algebra física",
-            }
-import time
-acertos = 0
-erros = 0
-nperguntas = 0
-for pergunta in perguntasmatematica:
-    print(pergunta)
-    print(opcoesmatematica[pergunta])
+def quiz(questions, options):
+    correct_answers = 0
+    incorrect_answers = 0
 
-    chute = input("Qual alternativa é a resposta: ").lower()
+    for question in questions:
+        print(question)
+        print(options[question])
+        
+        answer = input("What is your answer (a, b, c, d): ").lower()
+        
+        while answer not in ['a', 'b', 'c', 'd']:
+            print("That is not an option! Let's try again!")
+            answer = input("What is your answer (a, b, c, d): ").lower()
 
-    while chute not in ['a', 'b', 'c', 'd' ]:
-        print("Essa não é uma opção!, vamos tentar novamente!")
-        chute = input("Qual alternativa é a resposta: ").lower()
-    
-    if chute == perguntasmatematica[pergunta]:
-        print("Correto!")
-        acertos += 1
-        nperguntas += 1
-    else: 
-        print("Errado!")
-        erros += 1
-        nperguntas += 1
-    time.sleep(1)
-    print(f"Essa foi a pergunta número {nperguntas}, você tem {acertos} acertos e {erros}!")
+        if answer == questions[question]:
+            print("Correct!")
+            correct_answers += 1
+        else:
+            print("Wrong!")
+            incorrect_answers += 1
+
+        print(f"You have {correct_answers} correct answers and {incorrect_answers} incorrect answers.")
+        print()
+
