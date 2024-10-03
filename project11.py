@@ -22,6 +22,7 @@ for pergunta in perguntas:
 
     while chute not in ['a', 'b', 'c']:
         print("Essa não é uma opção!, vamos tentar novamente!")
+        chute = input("Qual alternativa é a resposta: ").lower()
     
     if chute == perguntas[pergunta]:
         print("Correto!")
