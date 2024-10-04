@@ -40,6 +40,25 @@ physics_options = {
     "What do you call the change of state from liquid to gas?": "A) Vaporization   B) Condensation   C) Sublimation   D) Solidification"
 }
 
+biology_questions = {
+    "What are prokaryotic and eukaryotic cells?": "a",
+    "What is the function of the mitochondria in the cell?": "b",
+    "What is photosynthesis?": "c",
+    "What is the structure responsible for gas exchange in plants?": "a",
+    "What is DNA and what is its function?": "b",
+    "What are the five kingdoms of living beings?": "c",
+    "What characterizes an ecosystem?": "d"
+}
+
+biology_options = {
+    "What are prokaryotic and eukaryotic cells?": "A) Cells without a nucleus and with a nucleus   B) Plant and animal cells   C) Bacterial and viral cells   D) Dead and living cells",
+    "What is the function of the mitochondria in the cell?": "A) To produce proteins   B) To produce energy   C) To store DNA   D) To regulate temperature",
+    "What is photosynthesis?": "A) Process of respiration in plants   B) Conversion of light into chemical energy   C) Excretion of gases   D) Chemical reaction of the soil",
+    "What is the structure responsible for gas exchange in plants?": "A) Stomata   B) Roots   C) Leaves   D) Stem",
+    "What is DNA and what is its function?": "A) Genetic material that stores information   B) Structure that provides energy   C) Compound that forms proteins   D) Membrane structure",
+    "What are the five kingdoms of living beings?": "A) Animals, Plants, Fungi, Protozoa, Bacteria   B) Mammals, Reptiles, Birds, Amphibians, Fish   C) Vegetables, Insects, Mammals, Fungi, Algae   D) None of the above",
+    "What characterizes an ecosystem?": "A) Only living beings   B) Interaction between living beings and the environment   C) Only the physical environment   D) Only vegetation"
+}
 
 def quiz(questions, options):
     correct_answers = 0
@@ -71,3 +90,7 @@ quiz(math_questions, math_options)
 
 print("Physics Quiz:")
 quiz(physics_questions, physics_options)
+
+print("Biology Quiz:")
+quiz(biology_questions, biology_options)
+
