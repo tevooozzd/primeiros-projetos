@@ -60,6 +60,26 @@ biology_options = {
     "What characterizes an ecosystem?": "A) Only living beings   B) Interaction between living beings and the environment   C) Only the physical environment   D) Only vegetation"
 }
 
+chemistry_questions = {
+    "What are atoms?": "a",
+    "What is the chemical formula of water?": "b",
+    "What is a chemical reaction?": "c",
+    "What do you call the process of separating mixtures?": "d",
+    "What is an acid and a base?": "a",
+    "What is the table that organizes chemical elements?": "b",
+    "What happens during combustion?": "c"
+}
+
+chemistry_options = {
+    "What are atoms?": "A) Basic units of matter   B) Sets of molecules   C) Structures of cells   D) Subatomic particles",
+    "What is the chemical formula of water?": "A) H2O2   B) H2O   C) O2   D) CO2",
+    "What is a chemical reaction?": "A) Physical change of state   B) Temperature change   C) Transformation of substances   D) Combination of gases",
+    "What do you call the process of separating mixtures?": "A) Dissolution   B) Combustion   C) Reaction   D) Distillation",
+    "What is an acid and a base?": "A) Substances that release and accept H+ ions   B) Liquids and solids   C) Chemical compounds   D) Homogeneous mixtures",
+    "What is the table that organizes chemical elements?": "A) Materials Table   B) Periodic Table   C) Reaction Table   D) Compounds Table",
+    "What happens during combustion?": "A) Release of energy   B) Absorption of heat   C) Formation of gases   D) None of the above"
+}
+
 def quiz(questions, options):
     correct_answers = 0
     incorrect_answers = 0
@@ -94,3 +114,5 @@ quiz(physics_questions, physics_options)
 print("Biology Quiz:")
 quiz(biology_questions, biology_options)
 
+print("Chemistry Quiz:")
+quiz(chemistry_questions, chemistry_options)
