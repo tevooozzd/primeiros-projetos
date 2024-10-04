@@ -20,6 +20,27 @@ math_options = {
 }
 
 
+physics_questions = {
+    "What is the law of universal gravitation?": "b",
+    "What is the unit of force in the International System?": "a",
+    "What defines the velocity of an object?": "c",
+    "What is the difference between mass and weight?": "d",
+    "What is kinetic energy?": "a",
+    "What happens when you increase the temperature of a gas, keeping its volume constant?": "b",
+    "What do you call the change of state from liquid to gas?": "a"
+}
+
+physics_options = {
+    "What is the law of universal gravitation?": "A) Forces between electric charges   B) Forces between masses   C) Forces between atoms   D) Forces between liquids",
+    "What is the unit of force in the International System?": "A) Newton   B) Joule   C) Pascal   D) Watt",
+    "What defines the velocity of an object?": "A) Distance   B) Time   C) Distance and time   D) Mass",
+    "What is the difference between mass and weight?": "A) Mass is force   B) Weight is a measure of matter   C) Mass is constant and weight varies with gravity   D) There is no difference",
+    "What is kinetic energy?": "A) Energy of motion   B) Potential energy   C) Thermal energy   D) Electrical energy",
+    "What happens when you increase the temperature of a gas, keeping its volume constant?": "A) Pressure decreases   B) Pressure increases   C) Volume increases   D) Temperature does not change",
+    "What do you call the change of state from liquid to gas?": "A) Vaporization   B) Condensation   C) Sublimation   D) Solidification"
+}
+
+
 def quiz(questions, options):
     correct_answers = 0
     incorrect_answers = 0
@@ -48,3 +69,5 @@ def quiz(questions, options):
 print("Math Quiz:")
 quiz(math_questions, math_options)
 
+print("Physics Quiz:")
+quiz(physics_questions, physics_options)
