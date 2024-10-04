@@ -1,5 +1,5 @@
 # Questions and answers for Mathematics
-questions_math = {
+math_questions = {
     "What is the square root of 144?": "c",
     "What is the formula to calculate the area of a circle?": "a",
     "If a triangle has sides of 3 cm, 4 cm, and 5 cm, is it a triangle?": "a",
@@ -9,7 +9,7 @@ questions_math = {
     "What do you call a sequence of numbers where each number is the sum of the two preceding ones?": "b"
 }
 
-options_math = {
+math_options = {
     "What is the square root of 144?": "A) 10    B) 11    C) 12    D) 13",
     "What is the formula to calculate the area of a circle?": "A) A=πr    B) Y=mx + b     C) A + B + C    D) P = 4l",
     "If a triangle has sides of 3 cm, 4 cm, and 5 cm, is it a triangle?": "A) Right    B) Isosceles    C) Scalene    D) Square",
@@ -28,11 +28,11 @@ def quiz(questions, options):
         print(question)
         print(options[question])
         
-        answer = input("What is your answer (a, b, c, d): ").lower()
+        answer = input("Which option is the answer (a, b, c, d): ").lower()
         
         while answer not in ['a', 'b', 'c', 'd']:
             print("That is not an option! Let's try again!")
-            answer = input("What is your answer (a, b, c, d): ").lower()
+            answer = input("Which option is the answer (a, b, c, d): ").lower()
 
         if answer == questions[question]:
             print("Correct!")
@@ -41,6 +41,10 @@ def quiz(questions, options):
             print("Wrong!")
             incorrect_answers += 1
 
-        print(f"You have {correct_answers} correct answers and {incorrect_answers} incorrect answers.")
+        print(f"You have {correct_answers} correct answers and {incorrect_answers} wrong answers.")
         print()
+
+
+print("Math Quiz:")
+quiz(math_questions, math_options)
 
