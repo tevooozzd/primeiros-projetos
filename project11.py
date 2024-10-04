@@ -80,6 +80,33 @@ chemistry_options = {
     "What happens during combustion?": "A) Release of energy   B) Absorption of heat   C) Formation of gases   D) None of the above"
 }
 
+history_questions = {
+    "Who was the first Roman emperor?": "a",
+    "What triggered the French Revolution?": "b",
+    "What is the importance of the signing of the Magna Carta?": "c",
+    "What was the Cold War?": "d",
+    "Who discovered Brazil?": "a",
+    "What was the Industrial Revolution?": "b",
+    "What were the causes of World War I?": "c",
+    "Who was Mahatma Gandhi?": "d",
+    "What characterized the Middle Ages?": "a",
+    "What was the impact of the discovery of America?": "b"
+}
+
+history_options = {
+    "Who was the first Roman emperor?": "A) Julius Caesar   B) Augustus   C) Nero   D) Constantine",
+    "What triggered the French Revolution?": "A) War   B) Social inequality   C) Discovery of new lands   D) Territorial expansion",
+    "What is the importance of the signing of the Magna Carta?": "A) To limit the power of the king   B) To proclaim independence   C) To establish a new religion   D) None of the above",
+    "What was the Cold War?": "A) Military conflict   B) Ideological dispute between the USA and the USSR   C) War of independence   D) Class conflict",
+    "Who discovered Brazil?": "A) Pedro Álvares Cabral   B) Christopher Columbus   C) Vasco da Gama   D) Ferdinand Magellan",
+    "What was the Industrial Revolution?": "A) Change of policies   B) Technological advancement and economic changes   C) War between countries   D) Popular revolt",
+    "What were the causes of World War I?": "A) Peace treaties   B) Rivalries and alliances   C) Economic crises   D) Social revolutions",
+    "Who was Mahatma Gandhi?": "A) Political leader   B) Religious leader   C) Pacifist activist   D) Scientist",
+    "What characterized the Middle Ages?": "A) Increase in trade   B) Feudalism and dominant Catholic Church   C) Information age   D) Industrial revolutions",
+    "What was the impact of the discovery of America?": "A) Increase in trade   B) Colonization and exploitation   C) Cultural exchanges   D) All of the above"
+}
+
+
 def quiz(questions, options):
     correct_answers = 0
     incorrect_answers = 0
@@ -116,3 +143,7 @@ quiz(biology_questions, biology_options)
 
 print("Chemistry Quiz:")
 quiz(chemistry_questions, chemistry_options)
+
+print("History Quiz:")
+quiz(history_questions, history_options)
+
