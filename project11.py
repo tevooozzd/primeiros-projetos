@@ -1,4 +1,21 @@
-# Questions and answers for Mathematics
+import time
+name = input("Type your name: ")
+
+print(f"So {name}, this a quiz game, to start you need to choose one subject and do the questions\nIn the total each on of them have 10 questions!")
+subject = input("So now, type the number of subject that you want ")
+
+
+
+
+
+
+
+
+
+
+
+
+
 math_questions = {
     "What is the square root of 144?": "c",
     "What is the formula to calculate the area of a circle?": "a",
