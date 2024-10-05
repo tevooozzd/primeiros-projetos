@@ -18,5 +18,13 @@ def horario(esc):
         site = BeautifulSoup(requisição.text, "html.parser")
         pesquisa = site.find("div", class_ ="YwPhnf")
         print(f"Sua escola foi {escolha}, e o horário é de {pesquisa.get_text()}")
-    
+     elif esc == 2:
+        escolha = "California (GMT: -7)"
+        link = "https://www.google.com/search?q=horario+na+california"
+        header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0 (Edition std-2)"                 
+        }
+        requisição = requests.get(link, headers = header)
+        site = BeautifulSoup(requisição.text, "html.parser")
+        pesquisa = site.find("div", class_ ="YwPhnf")
+        print(f"Sua escola foi {escolha}, e o horário é de {pesquisa.get_text()}")
 horario(escolha_pessoa)
