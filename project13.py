@@ -1,11 +1,16 @@
 import requests
 from bs4 import BeautifulSoup
 import webbrowser
+import time
 
-
-print("Which country do you want to know about the timer (GMT)")
+print("Which country do you want to know about the timer (GMT)?")
 user_choice = input("Please type the name of city: ")
 
+def beautifying():
+    for x in range(2):
+        time.sleep(0.7)
+        print("Waiting...")
+beautifying()
 def time_info(choice):
     link = f"https://www.google.com/search?q=time+in+{choice}"
     header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0 (Edition std-2)"                 }
