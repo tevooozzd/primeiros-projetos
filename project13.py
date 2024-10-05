@@ -1,48 +1,50 @@
 import requests
 from bs4 import BeautifulSoup
 
+print("Which of these cities do you want to know the time for?")
+print(" São Paulo - 1 (GMT -3)\n California - 2 (GMT -7)\n Tokyo - 3 (GMT +9)\n Berlin - 4 (GMT +2)")
+user_choice = int(input("Please enter your choice: "))
 
-
-
-print("Qual dessas cidades, você quer saber o nome?")
-print(" São Paulo - 1 (GMT -3)\n California - 2 (GMT -7)\n Tokyo - 3 (GMT +9)\n Berlim - 4 (GMT  +2)")
-escolha_pessoa = int(input("Digite aqui a sua escolha: "))
-
-def horario(esc):
-    if esc == 1:
-        escolha = "Brasilia (GMT: -3)"
-        link = "https://www.google.com/search?q=horario+em+brasilia"
-        header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0 (Edition std-2)"                 
+def time_info(choice):
+    if choice == 1:
+        selected_city = "Brasilia (GMT: -3)"
+        link = "https://www.google.com/search?q=current+time+in+brasilia"
+        header = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0 (Edition std-2)"
         }
-        requisição = requests.get(link, headers = header)
-        site = BeautifulSoup(requisição.text, "html.parser")
-        pesquisa = site.find("div", class_ ="YwPhnf")
-        print(f"Sua escola foi {escolha}, e o horário é de {pesquisa.get_text()}")
-     elif esc == 2:
-        escolha = "California (GMT: -7)"
-        link = "https://www.google.com/search?q=horario+na+california"
-        header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0 (Edition std-2)"                 
+        request = requests.get(link, headers=header)
+        site = BeautifulSoup(request.text, "html.parser")
+        search_result = site.find("div", class_="YwPhnf")
+        print(f"Your selected city is {selected_city}, and the time is {search_result.get_text()}")
+    elif choice == 2:
+        selected_city = "California (GMT: -7)"
+        link = "https://www.google.com/search?q=current+time+in+california"
+        header = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0 (Edition std-2)"
         }
-        requisição = requests.get(link, headers = header)
-        site = BeautifulSoup(requisição.text, "html.parser")
-        pesquisa = site.find("div", class_ ="YwPhnf")
-        print(f"Sua escola foi {escolha}, e o horário é de {pesquisa.get_text()}")
-    elif esc == 3:
-        escolha = "Tokyo (GMT: +9)"
-        link = "https://www.google.com/search?q=horario+em+tokyo"
-        header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0 (Edition std-2)"                 
+        request = requests.get(link, headers=header)
+        site = BeautifulSoup(request.text, "html.parser")
+        search_result = site.find("div", class_="YwPhnf")
+        print(f"Your selected city is {selected_city}, and the time is {search_result.get_text()}")
+    elif choice == 3:
+        selected_city = "Tokyo (GMT: +9)"
+        link = "https://www.google.com/search?q=current+time+in+tokyo"
+        header = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0 (Edition std-2)"
         }
-        requisição = requests.get(link, headers = header)
-        site = BeautifulSoup(requisição.text, "html.parser")
-        pesquisa = site.find("div", class_ ="YwPhnf")
-        print(f"Sua escola foi {escolha}, e o horário é de {pesquisa.get_text()}")
+        request = requests.get(link, headers=header)
+        site = BeautifulSoup(request.text, "html.parser")
+        search_result = site.find("div", class_="YwPhnf")
+        print(f"Your selected city is {selected_city}, and the time is {search_result.get_text()}")
     else:
-        escolha = "Berlim (GMT: -4)"
-        link = "https://www.google.com/search?q=horario+em+berlim"
-        header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0 (Edition std-2)"                 
+        selected_city = "Berlin (GMT: +2)"
+        link = "https://www.google.com/search?q=current+time+in+berlin"
+        header = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0 (Edition std-2)"
         }
-        requisição = requests.get(link, headers = header)
-        site = BeautifulSoup(requisição.text, "html.parser")
-        pesquisa = site.find("div", class_ ="YwPhnf")
-        print(f"Sua escola foi {escolha}, e o horário é de {pesquisa.get_text()}")
-horario(escolha_pessoa)
+        request = requests.get(link, headers=header)
+        site = BeautifulSoup(request.text, "html.parser")
+        search_result = site.find("div", class_="YwPhnf")
+        print(f"Your selected city is {selected_city}, and the time is {search_result.get_text()}")
+
+time_info(user_choice)
