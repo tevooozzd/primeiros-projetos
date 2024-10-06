@@ -47,3 +47,45 @@ def count_words(sentence):
 result = count_words(input("Type your sentence here: "))
 print(result)
 # Should return: 5
+
+
+
+
+
+
+
+
+# Just a train with os import and functions
+
+import os
+
+
+user_input = float(input("Type the fisrt number: "))
+user_input2 = float(input("Type the second number: "))
+def two_numbers(a, b):
+    return a + b
+
+
+if os.name == 'nt':
+    os.system('cls')
+else:
+    os.system('clear')
+
+
+print(f"The result is : {two_numbers(user_input, user_input2)}")
+
+
+
+
+
+
+user_input3 = int(input("Type the number: "))
+
+def result(number):
+    if number % 2 == 0:
+        return "even number"
+    else:
+        return "odd"
+
+print(result(user_input))
+
