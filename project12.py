@@ -101,3 +101,16 @@ def mul_table(x):
 mul_table(user_input)
 
 
+
+
+user_input = input("Type the word that you want to see if it's a polindrome: ")
+
+def word(x):
+    if x == ''.join(reversed(x)):
+        print("It's a palindrome")
+    else:
+        print("Isn't a palindrome")
+
+word(user_input)
+
+
