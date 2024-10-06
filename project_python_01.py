@@ -1,11 +1,9 @@
-# ================================
-#          Multiplication Project
-# ================================
+########################################
+#
+#       Average calculation project
+#
+########################################
 
-# - Using IF, ELIF, and ELSE
-# - Using WHILE and FOR
-# - Importing TIME
-# - Using \n and \t for formatting
 
 
 
