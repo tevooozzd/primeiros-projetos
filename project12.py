@@ -89,3 +89,15 @@ def result(number):
 
 print(result(user_input))
 
+
+
+
+user_input4 = int(input("Type the number that you want to know the multiplication table: "))
+
+def mul_table(x):
+    for y in range(1, 11):
+        print(f"{x} × {y} = {x * y}")
+
+mul_table(user_input)
+
+
