@@ -137,3 +137,17 @@ word(user_input)
 
 
 
+
+my_list = []
+
+def addlist(x): 
+    my_list.append(x)
+
+for i in range(10):
+    user_input = input("Type numbers to the list: ")
+    addlist(user_input)  
+
+my_list.sort() 
+print("Sorted list:", my_list)
+##############################################################
+
